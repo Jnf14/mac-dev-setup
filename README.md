@@ -66,36 +66,8 @@ In the tab **Profiles**, create a new one with the "+" icon, and rename it to yo
 
 When done, hit the red "X" in the upper left (saving is automatic in macOS preference panes). Close the window and open a new one to see the size change.
 
-### Beautiful terminal
-
-Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place. What follows might seem like a lot of work, but trust me, it'll make the development experience so much better.
-
-First let's add some color. There are many great color schemes out there, but if you don't know where to start you can try [Atom One Dark](https://github.com/nathanbuchar/atom-one-dark-terminal). Download the iTerm presets for the theme by running:
-
-```
-cd ~/Downloads
-curl -o "Atom One Dark.itermcolors" https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Dark.itermcolors
-curl -o "Atom One Light.itermcolors" https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Light.itermcolors
-```
-
-Then, in **iTerm2 Preferences**, under **Profiles** and **Colors**, go to **Color Presets... > Import...**, find and open the **Atom One Dark.itermcolors** file we just downloaded. Repeat these steps for **Atom One Light.itermcolors**.  Now open **Color Presets...** again and select **Atom One Dark** to activate the dark theme (or choose the light them if that's your preference).
-
-Not a lot of colors yet. We need to tweak a little bit our Unix user's profile for that. This is done (on macOS and Linux), in the `~/.bash_profile` text file (`~` stands for the user's home directory).
-
-We'll come back to the details of that later, but for now, just download the files [.bash_profile](https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_profile), [.bash_prompt](https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_prompt), [.aliases](https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.aliases) attached to this document into your home directory (`.bash_profile` is the one that gets loaded, I've set it up to call the others):
-
-```
-cd ~
-curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_profile
-curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_prompt
-curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.aliases
-```
-
-With that, open a new terminal tab (**Cmd+T**) and see the change! Try the list commands: `ls`, `ls -lh` (aliased to `ll`), `ls -lha` (aliased to `la`).
-
-Now we have a terminal we can work with!
-
-(Thanks to Mathias Bynens for his awesome [dotfiles](https://github.com/mathiasbynens/dotfiles).)
+### Oh-My-ZSH & PowerLevel10k
+TODO
 
 ## Homebrew
 
@@ -846,9 +818,31 @@ This really depends on how you want to organize your files, but I like to put al
 ## Apps
 
 Here is a quick list of some apps I use, and that you might find useful as well:
-
-- [1Password](https://1password.com/): Securely store your login and passwords, and access them from all your devices. **($3/month)**
-- [Dropbox](https://www.dropbox.com/): File syncing to the cloud. It is cross-platform, but if all your devices are Apple you may prefer [iCloud Drive](https://support.apple.com/en-ca/HT206985). **(Free for 2GB)**
-- [Postman](https://www.getpostman.com/): Easily make HTTP requests. Useful to test your REST APIs. **(Free for basic features)**
 - [GitHub Desktop](https://desktop.github.com/): I do everything through the `git` command-line tool, but I like to use GitHub Desktop just to review the diff of my changes. **(Free)**
-- [Spectacle](https://www.spectacleapp.com/): Move and resize windows with keyboard shortcuts. **(Free)**
+  ```
+  brew install --cask github
+  ```
+
+- [Rectangle](https://rectangleapp.com): Move and resize windows easily. **(Free)**
+  ```
+  brew install --cask rectangle
+  ```
+
+- [Postman](https://www.postman.com/): Easily make HTTP requests. Useful to test your REST APIs. **(Free for basic features)**
+  ```
+  brew install --cask rectangle
+  ```
+
+- [Maccy](https://maccy.app): A clipboard manager for macOS which does one job - keep your copy history at hand. Period. **(Free)**
+  ```
+  brew install --cask maccy
+  ```
+
+- [Monitor control](https://github.com/MonitorControl/MonitorControl): An awesome tool to control external monitor brightness & volume. **(Free)**
+  ```
+  brew install --cask monitorcontrol
+  ```
+
+- [Xnip](https://www.xnipapp.com): A great snipping tool to annotate the screenshots directly. (**Free**, [Available on the AppStore](https://itunes.apple.com/us/app/xnip/id1221250572?mt=12))
+
+
